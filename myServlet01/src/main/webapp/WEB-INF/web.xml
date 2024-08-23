@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+    xmlns="https://jakarta.ee/xml/ns/jakartaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+    version="6.0">
+  <display-name>AppName</display-name>
+  <!--  1St link-->
+  <servlet>
+  <servlet-name>firstserver</servlet-name>
+  <servlet-class>com.ap.servletOne</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>firstserver</servlet-name>
+  <url-pattern>/com</url-pattern> 
+  </servlet-mapping>
+  
+  <!-- Second link -->
+   <servlet>
+  <servlet-name>secondserver</servlet-name>
+  <servlet-class>com.ap.servletTwo</servlet-class>
+   </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>secondserver</servlet-name>
+   <url-pattern>/com2</url-pattern>
+   </servlet-mapping>
+   
+   <!-- this is for Html  -->
+   <servlet>
+   <servlet-name>htmlfile</servlet-name>
+   <servlet-class>com.ap.servletThree</servlet-class>
+   </servlet>
+   
+   <servlet-mapping>
+   <servlet-name>htmlfile</servlet-name>
+   <url-pattern>/ht</url-pattern>
+   </servlet-mapping>
+   
+   <!-- this is for Html  -->
+   <servlet>
+        <servlet-name>gs</servlet-name>
+        <servlet-class>com.ap.GS.firstGs</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>gs</servlet-name>
+        <url-pattern>/generic</url-pattern>
+    </servlet-mapping>
+</web-app>

@@ -1,0 +1,46 @@
+<web-app
+    xmlns="https://jakarta.ee/xml/ns/jakartaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+    version="6.0">
+  <display-name>AppName</display-name> 
+  <servlet>
+  <servlet-name>form1</servlet-name>
+  <servlet-class>com.form.ap.FormSimple01</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>form1</servlet-name>
+  <url-pattern>/send</url-pattern>
+  </servlet-mapping>
+  <!-- Servlet For config -->
+  <servlet>
+  	<servlet-name>con</servlet-name>
+ 	<servlet-class>com.ap.config.config01</servlet-class>
+ 	<init-param>
+ 	<param-name>p1</param-name>
+ 	<param-value>me.jpeg</param-value>
+ 	</init-param>
+ 	<init-param>
+ 	<param-name>p2</param-name>
+ 	<param-value>pic-2.jpg</param-value>
+ 	</init-param>
+ 	
+ 	<init-param>
+ 	<param-name>p3</param-name>
+ 	<!--<param-value>https://unsplash.com/photos/a-woman-sitting-at-a-table-working-on-a-laptop-ujDTFimW2mE</param-value>  -->
+ 	<param-value>pic-2.jpg</param-value>
+ 	</init-param>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>con</servlet-name>
+  <url-pattern>/ap</url-pattern>
+  </servlet-mapping>
+  
+  
+  <context-param>
+  <param-name>url</param-name>
+  <param-value>jdbc:mysql//localhost:3306/practicO</param-value>
+  </context-param>
+  
+</web-app>
